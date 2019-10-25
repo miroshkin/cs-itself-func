@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,6 +42,10 @@ namespace CsItselfFunc
 
             Func<int, int, int> sum = (x, y) => x + y;
             Console.WriteLine(sum.Invoke(200,300));
+
+
+            Func<int, int, int, DateTime> createDateTime = (day, month, year) => new DateTime(year, month,day);
+            Console.WriteLine(createDateTime(1,9,2019));
 
         }
 
